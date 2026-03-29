@@ -1,5 +1,30 @@
 # TicTacToe Game - Design Documentation
 
+## All LLD Objects in this Repository
+
+| #  | LLD Object          | Folder          |
+|----|---------------------|-----------------|
+| 1  | Parking Lot System  | `parking_Lot/`  |
+| 2  | TicTacToe Game      | `TicTacToe/`    |
+| 3  | Car Rental System   | `carRental/`    |
+| 4  | Snake and Ladder    | `snakeNladder/` |
+
+## Entities Used (9 Classes)
+
+| #  | Entity          | Type              | Package    |
+|----|-----------------|-------------------|------------|
+| 1  | GameStatus      | Enum              | model      |
+| 2  | PieceType       | Enum              | model      |
+| 3  | PlayingPiece    | Abstract Class    | model      |
+| 4  | PlayingPieceX   | Concrete Class    | model      |
+| 5  | PlayingPieceO   | Concrete Class    | model      |
+| 6  | Player          | Entity            | model      |
+| 7  | Board           | Entity            | model      |
+| 8  | TicTacToeGame   | Game Controller   | TicTacToe  |
+| 9  | PlayGame        | Main / Client     | TicTacToe  |
+
+---
+
 ## Overview
 A simple implementation of the classic TicTacToe game demonstrating object-oriented design principles including inheritance, encapsulation, and strategy pattern.
 

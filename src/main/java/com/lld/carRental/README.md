@@ -1,5 +1,45 @@
 # Car Rental System - Design Documentation
 
+## All LLD Objects in this Repository
+
+| #  | LLD Object          | Folder          |
+|----|---------------------|-----------------|
+| 1  | Parking Lot System  | `parking_Lot/`  |
+| 2  | TicTacToe Game      | `TicTacToe/`    |
+| 3  | Car Rental System   | `carRental/`    |
+| 4  | Snake and Ladder    | `snakeNladder/` |
+
+## Entities Used (24 Classes)
+
+| #  | Entity                     | Type                | Package         |
+|----|----------------------------|---------------------|-----------------|
+| 1  | VehicleType                | Enum                | product         |
+| 2  | VehicleStatus              | Enum                | product         |
+| 3  | ReservationType            | Enum                | reservation     |
+| 4  | ReservationStatus          | Enum                | reservation     |
+| 5  | PaymentMode                | Enum                | payment         |
+| 6  | Location                   | Value Object        | carRental       |
+| 7  | User                       | Entity              | carRental       |
+| 8  | Vehicle                    | Entity              | product         |
+| 9  | DateInterval               | Value Object        | product         |
+| 10 | Reservation                | Entity              | reservation     |
+| 11 | ReservationRepository      | Repository          | reservation     |
+| 12 | VehicleInventoryManager    | Service / Manager   | product         |
+| 13 | ReservationManager         | Service / Manager   | reservation     |
+| 14 | BillingStrategy            | Interface           | Bill            |
+| 15 | DailyBillingStrategy       | Strategy Impl       | Bill            |
+| 16 | Bill                       | Entity              | Bill            |
+| 17 | BillManager                | Service / Manager   | Bill            |
+| 18 | PaymentStrategy            | Interface           | payment         |
+| 19 | UPIPaymentStrategy         | Strategy Impl       | payment         |
+| 20 | Payment                    | Entity              | payment         |
+| 21 | PaymentManager             | Service / Manager   | payment         |
+| 22 | Store                      | Aggregate Root      | carRental       |
+| 23 | VehicleRentalSystem        | Facade              | carRental       |
+| 24 | Demo                       | Main / Client       | carRental       |
+
+---
+
 ## Overview
 A comprehensive vehicle rental management system demonstrating advanced object-oriented design principles including Strategy Pattern, Repository Pattern, thread-safe operations, and dependency injection. The system supports multiple vehicle types, flexible billing strategies, multiple payment methods, and reservation management with date overlap checking.
 

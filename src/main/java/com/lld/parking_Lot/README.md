@@ -1,5 +1,42 @@
 # Parking Lot System - Design Documentation
 
+## All LLD Objects in this Repository
+
+| #  | LLD Object          | Folder          |
+|----|---------------------|-----------------|
+| 1  | Parking Lot System  | `parking_Lot/`  |
+| 2  | TicTacToe Game      | `TicTacToe/`    |
+| 3  | Car Rental System   | `carRental/`    |
+| 4  | Snake and Ladder    | `snakeNladder/` |
+
+## Entities Used (21 Classes)
+
+| #  | Entity                     | Type                | Package         |
+|----|----------------------------|---------------------|-----------------|
+| 1  | VehicleType                | Enum                | parking_Lot     |
+| 2  | Vehicle                    | Entity              | parking_Lot     |
+| 3  | ParkingSpot                | Entity              | parking_Lot     |
+| 4  | Ticket                     | Value Object        | parking_Lot     |
+| 5  | ParkingSpotLookupStrategy  | Interface           | parking_Lot     |
+| 6  | RandomLookupStrategy       | Strategy Impl       | parking_Lot     |
+| 7  | pricingStrategy            | Interface           | parking_Lot     |
+| 8  | FixedPricingStrategy       | Strategy Impl       | parking_Lot     |
+| 9  | CostComputation            | Service             | parking_Lot     |
+| 10 | Payment                    | Interface           | parking_Lot     |
+| 11 | CashPayment                | Strategy Impl       | parking_Lot     |
+| 12 | UpiPayment                 | Strategy Impl       | parking_Lot     |
+| 13 | ParkingSpotManager         | Abstract Manager    | parking_Lot     |
+| 14 | TwoWheelerSpotManager      | Concrete Manager    | parking_Lot     |
+| 15 | FourWheelerSpotManager     | Concrete Manager    | parking_Lot     |
+| 16 | ParkingLevel               | Aggregator          | parking_Lot     |
+| 17 | ParkingBuilding            | Orchestrator        | parking_Lot     |
+| 18 | EntranceGate               | Entry Point         | parking_Lot     |
+| 19 | ExitGate                   | Exit Point          | parking_Lot     |
+| 20 | ParkingLot                 | Facade              | parking_Lot     |
+| 21 | ParkingClient              | Main / Client       | parking_Lot     |
+
+---
+
 ## Overview
 A multi-level parking lot management system demonstrating advanced object-oriented design principles including Strategy Pattern, Factory Pattern, dependency injection, and thread-safe operations. The system supports multiple vehicle types, flexible pricing strategies, and multiple payment methods.
 

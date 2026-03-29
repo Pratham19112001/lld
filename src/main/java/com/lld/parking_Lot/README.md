@@ -8,6 +8,7 @@
 | 2  | TicTacToe Game      | `TicTacToe/`    |
 | 3  | Car Rental System   | `carRental/`    |
 | 4  | Snake and Ladder    | `snakeNladder/` |
+| 5  | HashMap Implementation | `hashmap/`   |
 
 ## Entities Used (21 Classes)
 

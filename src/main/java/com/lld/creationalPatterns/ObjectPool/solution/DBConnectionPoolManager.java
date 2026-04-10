@@ -62,14 +62,48 @@ public class DBConnectionPoolManager {
      */
     public static DBConnectionPoolManager getInstance() {
         if (dbConnectionPoolManagerInstance == null) {
-            synchronized (DBConnectionPoolManager.class) {
-                if (dbConnectionPoolManagerInstance == null) {
+            // why synchronized is used ?
+            //  it is used to lock a class as there can be a case 2 threads entering this condition so both can create an instance of it so to block that we use this
+            // thread 1 = enters after seeing as null
+            // thread 2 = enters after seeing as null both can create an instance
+            synchronized (DBConnectionPoolManager.class)
+            {
+                if (dbConnectionPoolManagerInstance == null)
+                {
                     dbConnectionPoolManagerInstance = new DBConnectionPoolManager();
                 }
             }
         }
         return dbConnectionPoolManagerInstance;
     }
+
+    //steps
+
+    // Step 1
+    // T1 → sees null → enters
+    // T2 → sees null → enters
+
+    // Step 2
+    // T1 → enters synchronized
+    // T2 → waits
+
+    // Step 3
+    // T1 → second check → still null → creates object ✅
+    // T1 → exits
+
+    // Step 4
+    // T2 → enters synchronized
+
+    // Step 5
+    // if (instance == null)  // ❌ false
+    // T2 DOES NOT create new object ✅
+
+    // Step 6
+    // Only ONE object created ✔
+
+    // Timeline
+    // T1: check null ✔ → lock → check null ✔ → create → unlock
+    // T2: check null ✔ → wait → lock → check null ❌ → skip
 
     /**
      * Borrows a connection from the pool.

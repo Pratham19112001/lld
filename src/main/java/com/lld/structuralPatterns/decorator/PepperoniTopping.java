@@ -1,19 +1,19 @@
 package com.lld.structuralPatterns.decorator;
 
 // Step 4: Define the Concrete Decorators
-public class ExtraCheeseTopping extends ToppingDecorator {
+public class PepperoniTopping extends ToppingDecorator {
 
-    public ExtraCheeseTopping(BasePizza pizza) {
+    public PepperoniTopping(BasePizza pizza) {
         super(pizza);
     }
 
     @Override
     public String getDescription() {
-        return pizza.getDescription() + " + Extra Cheese";
+        return pizza.getDescription() + " + Pepperoni";
     }
 
     @Override
     public double getCost() {
-        return pizza.getCost() + 20;
+        return pizza.getCost() + 50;
     }
 }
